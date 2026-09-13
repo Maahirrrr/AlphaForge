@@ -65,12 +65,12 @@ export default function EquityChart({ data, title = "PORTFOLIO EQUITY CURVE VS B
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-0.5 bg-[#34C759]"></span>
             <span className="text-[#8A94A6]">Portfolio:</span>
-            <span className="font-bold text-white">?{activePoint.equity.toLocaleString("en-IN")}</span>
+            <span className="font-bold text-white">₹{activePoint.equity.toLocaleString("en-IN")}</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-0.5 bg-[#007AFF] border-b border-dashed"></span>
             <span className="text-[#8A94A6]">Benchmark:</span>
-            <span className="font-bold text-[#8A94A6]">?{activePoint.benchmark.toLocaleString("en-IN")}</span>
+            <span className="font-bold text-[#8A94A6]">₹{activePoint.benchmark.toLocaleString("en-IN")}</span>
           </div>
           <span className="text-[#525C6C]">[{activePoint.date}]</span>
         </div>
@@ -97,7 +97,7 @@ export default function EquityChart({ data, title = "PORTFOLIO EQUITY CURVE VS B
               <g key={i}>
                 <line x1={padding.left} y1={y} x2={width - padding.right} y2={y} stroke="#1D232C" strokeDasharray="3 3" />
                 <text x={padding.left - 8} y={y + 3} fill="#525C6C" fontSize="10" textAnchor="end" fontFamily="JetBrains Mono">
-                  ?{(val / 100000).toFixed(1)}L
+                  ₹{(val / 100000).toFixed(1)}L
                 </text>
               </g>
             );

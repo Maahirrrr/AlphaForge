@@ -78,7 +78,7 @@ export default function DashboardPage() {
         price: Number(price)
       });
       if (res.status === "FILLED") {
-        setOrderFeedback(`SUCCESS: Filled ${side} ${qty} ${sym} @ ?${res.price}`);
+        setOrderFeedback(`SUCCESS: Filled ${side} ${qty} ${sym} @ ₹${res.price}`);
       } else {
         setOrderFeedback(`BLOCKED: ${res.rejection_reason || "Risk limits violated."}`);
       }
@@ -111,7 +111,7 @@ export default function DashboardPage() {
         <div className="terminal-card p-4">
           <span className="text-[10px] font-mono text-[#8A94A6] uppercase">PORTFOLIO EQUITY</span>
           <div className="text-lg font-bold mono-num text-white mt-1">
-            ?{account ? account.total_equity.toLocaleString("en-IN") : "---"}
+            ₹{account ? account.total_equity.toLocaleString("en-IN") : "---"}
           </div>
           <span className="text-[10px] font-mono text-[#525C6C]">DEMO CAPITAL</span>
         </div>
@@ -119,7 +119,7 @@ export default function DashboardPage() {
         <div className="terminal-card p-4">
           <span className="text-[10px] font-mono text-[#8A94A6] uppercase">AVAILABLE CASH</span>
           <div className="text-lg font-bold mono-num text-[#34C759] mt-1">
-            ?{account ? account.cash.toLocaleString("en-IN") : "---"}
+            ₹{account ? account.cash.toLocaleString("en-IN") : "---"}
           </div>
           <span className="text-[10px] font-mono text-[#525C6C]">UNINVESTED</span>
         </div>
@@ -131,7 +131,7 @@ export default function DashboardPage() {
               account && account.total_pnl >= 0 ? "text-[#34C759]" : "text-[#FF3B30]"
             }`}
           >
-            {account ? `${account.total_pnl >= 0 ? "+" : ""}?${account.total_pnl.toLocaleString("en-IN")}` : "---"}
+            {account ? `${account.total_pnl >= 0 ? "+" : ""}₹${account.total_pnl.toLocaleString("en-IN")}` : "---"}
           </div>
           <span className="text-[10px] font-mono text-[#8A94A6]">
             {account ? `${account.total_pnl_pct}%` : ""}
@@ -237,7 +237,7 @@ export default function DashboardPage() {
 
               <div className="text-[11px] text-[#8A94A6] flex justify-between border-t border-[#1D232C] pt-2">
                 <span>Estimated Notional:</span>
-                <span className="text-white font-bold">?{(qty * price).toLocaleString("en-IN")}</span>
+                <span className="text-white font-bold">₹{(qty * price).toLocaleString("en-IN")}</span>
               </div>
 
               <button
@@ -293,10 +293,10 @@ export default function DashboardPage() {
                       <tr key={p.symbol} className="hover:bg-[#13171D]">
                         <td className="py-2 text-white font-bold">{p.symbol}</td>
                         <td className="py-2 text-[#8A94A6]">{p.quantity}</td>
-                        <td className="py-2 text-[#8A94A6]">?{p.avg_price.toFixed(2)}</td>
-                        <td className="py-2 text-white">?{p.current_price.toFixed(2)}</td>
+                        <td className="py-2 text-[#8A94A6]">₹{p.avg_price.toFixed(2)}</td>
+                        <td className="py-2 text-white">₹{p.current_price.toFixed(2)}</td>
                         <td className={`py-2 text-right font-bold ${isProfitable ? "text-[#34C759]" : "text-[#FF3B30]"}`}>
-                          {isProfitable ? "+" : ""}?{p.unrealized_pnl.toFixed(2)}
+                          {isProfitable ? "+" : ""}₹{p.unrealized_pnl.toFixed(2)}
                         </td>
                       </tr>
                     );
@@ -342,7 +342,7 @@ export default function DashboardPage() {
                         {o.side}
                       </td>
                       <td className="py-2 text-[#8A94A6]">{o.quantity}</td>
-                      <td className="py-2 text-white">?{o.price?.toFixed(2) || "---"}</td>
+                      <td className="py-2 text-white">₹{o.price?.toFixed(2) || "---"}</td>
                       <td className="py-2 text-right">
                         <span
                           className={`px-1.5 py-0.5 text-[10px] font-bold ${

@@ -71,7 +71,7 @@ export default function SettingsPage() {
             <div className="flex justify-between border-b border-[#1D232C]/40 pb-1.5">
               <span className="text-[#8A94A6]">MAX SINGLE ORDER NOTIONAL</span>
               <span className="text-white font-bold">
-                ?{risk?.limits?.max_order_value ? risk.limits.max_order_value.toLocaleString("en-IN") : "2,00,000"}
+                ₹{risk?.limits?.max_order_value ? risk.limits.max_order_value.toLocaleString("en-IN") : "2,00,000"}
               </span>
             </div>
           </div>

@@ -82,7 +82,7 @@ export default function BacktestLabPage() {
           </div>
 
           <div>
-            <label className="text-[#8A94A6] block mb-1">INITIAL CAPITAL (?)</label>
+            <label className="text-[#8A94A6] block mb-1">INITIAL CAPITAL (₹ / $)</label>
             <input
               type="number"
               value={capital}

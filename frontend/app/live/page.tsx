@@ -43,7 +43,7 @@ export default function LiveTradingHub() {
       <div className="p-4 bg-[#FF3B30]/15 border-2 border-[#FF3B30] text-white font-mono text-xs space-y-2">
         <div className="flex items-center gap-2 text-[#FF3B30] font-bold text-sm">
           <AlertTriangle className="w-5 h-5 animate-pulse" />
-          <span>?? LIVE TRADING SAFETY CONTROL HUB</span>
+          <span>LIVE TRADING SAFETY CONTROL HUB</span>
         </div>
         <p className="text-[#F0F2F5] leading-relaxed">
           REAL CAPITAL RISK GATEWAY. By default, AlphaForge strictly operates in PAPER TRADING mode.

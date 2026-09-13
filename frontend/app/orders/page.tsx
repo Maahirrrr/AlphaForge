@@ -110,7 +110,7 @@ export default function OrdersPage() {
                       {o.side}
                     </td>
                     <td className="py-2.5 text-[#8A94A6]">{o.quantity}</td>
-                    <td className="py-2.5 text-white">?{o.price?.toFixed(2) || "---"}</td>
+                    <td className="py-2.5 text-white">₹{o.price?.toFixed(2) || "---"}</td>
                     <td className="py-2.5">
                       <span
                         className={`px-2 py-0.5 text-[10px] font-bold ${

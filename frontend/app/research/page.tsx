@@ -261,7 +261,7 @@ export default function ResearchPage() {
                     <tr key={f.fold} className="hover:bg-[#13171D]">
                       <td className="py-2 text-[#525C6C]">Fold #{f.fold}</td>
                       <td className="py-2 text-white">
-                        {f.test_start} ? {f.test_end}
+                        {f.test_start} → {f.test_end}
                       </td>
                       <td
                         className={`py-2 font-bold ${
