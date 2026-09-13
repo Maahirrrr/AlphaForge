@@ -9,22 +9,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        surface0: "#08090B",
+        surface1: "#0D1117",
+        surface2: "#131822",
+        surface3: "#1A2230",
+        surface4: "#242E40",
         background: "#08090B",
-        card: "#0E1115",
-        cardHover: "#13171D",
-        border: "#1D232C",
-        borderHighlight: "#2A323E",
-        terminalGreen: "#34C759",
-        hazardRed: "#FF3B30",
-        alertAmber: "#FF9500",
+        card: "#131822",
+        cardHover: "#1A2230",
+        border: "#1E2635",
+        borderHighlight: "#2E3A4E",
+        terminalGreen: "#22C55E",
+        hazardRed: "#EF4444",
+        alertAmber: "#F59E0B",
         quantBlue: "#007AFF",
-        textPrimary: "#F0F2F5",
+        icyBlue: "#38BDF8",
+        textPrimary: "#F0F3F8",
         textSecondary: "#8A94A6",
-        textMuted: "#525C6C"
+        textMuted: "#4F596A"
       },
       fontFamily: {
-        mono: ["JetBrains Mono", "SF Mono", "Menlo", "Consolas", "monospace"],
-        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"]
+        mono: ["JetBrains Mono", "IBM Plex Mono", "SF Mono", "Menlo", "Consolas", "monospace"],
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+      },
+      animation: {
+        pulseSlow: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        ticker: "ticker 40s linear infinite",
+      },
+      keyframes: {
+        ticker: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        }
       }
     },
   },
