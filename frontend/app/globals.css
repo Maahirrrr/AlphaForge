@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #08090B;
+    --card: #0E1115;
+    --border: #1D232C;
+  }
+  
+  body {
+    background-color: #08090B;
+    color: #F0F2F5;
+    font-family: 'Inter', -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Force monospace tabular alignment for all numbers */
+  .mono-num {
+    font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090B;
+}
+::-webkit-scrollbar-thumb {
+  background: #1D232C;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A323E;
+}
+
+/* Rigid blueprint grid & terminal styling */
+.terminal-card {
+  background-color: #0E1115;
+  border: 1px solid #1D232C;
+  border-radius: 0px;
+}
+
+.terminal-card:hover {
+  border-color: #2A323E;
+}
+
+.subtle-grid {
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
